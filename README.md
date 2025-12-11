@@ -50,3 +50,28 @@ Si vous lancez le programme pour la première fois vous serez invité à suivre 
 > [!WARNING]
 > Seulement les collaborateurs d'Epiconcept sont autorisés à utiliser l'outil si vous utiliser un autre compte Google cela ne marchera pas!
 
+Après avoir récupéré le token, le programme ira chercher directement votre Google Calendar et le mettre en forme sous ```json```, il n'y a actuellement pas d'option d'enregistrer les informations dans un fichier JSON et les heures que vous avez entré dans votre agenda n'est qu'affiché dans le terminal. 
+
+Voici à quoi pourrait ressembler la récupération d'une journée : 
+```json
+{
+    "2025-12-01": { // Date 
+        "day_name": "Monday", // Le jour au cas où la date ne serait pas claire
+        "events": { // Dictionnaire des évènements
+            "FITNET": 0.5, // Ici il y a le "nom de l'évènement : temps converti heure/100 
+            "Ticket n°69 420": 2.0,
+            "Point rapide retour ....": 0.5,
+            "Mail": 0.5,
+            "Réunion staff": 4.0,
+            "Mini réunion": 0.5 
+        },
+        "total_day_hours": 8.0, // Total sur la journée
+        "TNA": "0/8" // Temps non attribué restant (trucs que vous avez oublié de noté sur Google Calendar)
+    }
+}
+```
+
+Ces informations peuvent ensuite vous aider à entrer plus rapidement vos temps dans Fitnet! 
+
+## Améliorations futures 
+Il manque pleins de choses à ajouter, si vous avez des idées n'hésitez surtout pas! Si vous êtes à l'aise avec Python alors n'hésitez pas non plus à faire des modifications! 
