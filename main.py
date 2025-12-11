@@ -39,7 +39,7 @@ def add_tna(day, total):
     else:
         return f"{str(7.5 - total)}/7.5"
 
-def main():
+def retrieve_data(output=None):
     creds = None
     if os.path.exists("./data/token.json"):
         creds = Credentials.from_authorized_user_file("./data/token.json", SCOPES)
@@ -110,11 +110,32 @@ def main():
         for day_key, intervals in intervals_per_day.items():
             week_hours[day_key]["total_day_hours"] = merge_intervals(intervals)
             week_hours[day_key]["TNA"] = add_tna(week_hours[day_key]["day_name"], week_hours[day_key]["total_day_hours"])
-
-        print(json.dumps(week_hours, indent=4, ensure_ascii=False))
-
+    
+        if output == None:
+            print(json.dumps(week_hours, indent=4, ensure_ascii=False))
+        else:
+            if os.path.isdir(output):
+                output_path = os.path.join(output, "output.json")
+            else:
+                output_path = output
+            print(json.dumps(week_hours, indent=4, ensure_ascii=False))
+            print(f"Fichier enregistré sous : {output_path}.")
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(week_hours, f, indent=4, ensure_ascii=False)
+                
     except HttpError as error:
         print(f"An error occurred: {error}")
+        
+    
+def main():
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Récupère les informations et simplifie Google Calendar pour la saisie dans Fitnet.")
+    parser.add_argument('--output', '-o', required=False, help="Chemin ou enregistrer le output.json")
 
+    args = parser.parse_args()
+    
+    retrieve_data(args.output)
+    
 if __name__ == "__main__":
     main()
