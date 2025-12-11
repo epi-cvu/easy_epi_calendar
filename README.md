@@ -58,7 +58,7 @@ Voici à quoi pourrait ressembler la récupération d'une journée :
     "2025-12-01": { // Date 
         "day_name": "Monday", // Le jour au cas où la date ne serait pas claire
         "events": { // Dictionnaire des évènements
-            "FITNET": 0.5, // Ici il y a le "nom de l'évènement : temps converti heure/100 
+            "FITNET": 0.5, // Ici il y a le "nom de l'évènement" : "temps converti heure/100" 
             "Ticket n°69 420": 2.0,
             "Point rapide retour ....": 0.5,
             "Mail": 0.5,
