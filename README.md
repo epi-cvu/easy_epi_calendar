@@ -74,10 +74,10 @@ Voici à quoi pourrait ressembler la récupération d'une journée :
 Ces informations peuvent ensuite vous aider à entrer plus rapidement vos temps dans Fitnet! 
 
 > [!TIP]
-> Vous avez l'option d'enregistrer les informations dans un fichier. Par défaut, le programme vous affichera simplement les informations. 
-> **Options** 
-> ```-h``` ou ```--help``` : Pour savoir l'ensemble des options qui existent avec les descriptions
-> ```-o``` ou ```--output``` : Pour indiquer le dossier ou le chemin + le nom du fichier sous lequel enregistrer. **N'oubliez pas d'ajouter l'extension ```.json```**. Par défaut le fichier s'enregistrera sous le nom ```output.json```
+> Vous avez l'option d'enregistrer les informations dans un fichier. Par défaut, le programme vous affichera simplement les informations. <br>
+> **Options** <br>
+> - ```-h``` ou ```--help``` : Pour savoir l'ensemble des options qui existent avec les descriptions
+> - ```-o``` ou ```--output``` : Pour indiquer le dossier ou le chemin + le nom du fichier sous lequel enregistrer. **N'oubliez pas d'ajouter l'extension ```.json```**. Par défaut le fichier s'enregistrera sous le nom ```output.json```
 
 ## Améliorations futures 
 Il manque pleins de choses à ajouter, si vous avez des idées n'hésitez surtout pas! Si vous êtes à l'aise avec Python alors n'hésitez pas non plus à faire des modifications! 
