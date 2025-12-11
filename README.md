@@ -50,7 +50,7 @@ Si vous lancez le programme pour la première fois vous serez invité à suivre 
 > [!WARNING]
 > Seulement les collaborateurs d'Epiconcept sont autorisés à utiliser l'outil si vous utiliser un autre compte Google cela ne marchera pas!
 
-Après avoir récupéré le token, le programme ira chercher directement votre Google Calendar et le mettre en forme sous ```json```, il n'y a actuellement pas d'option d'enregistrer les informations dans un fichier JSON et les heures que vous avez entré dans votre agenda n'est qu'affiché dans le terminal. 
+Après avoir récupéré le token, le programme ira chercher directement votre Google Calendar et le mettre en forme sous ```json```.
 
 Voici à quoi pourrait ressembler la récupération d'une journée : 
 ```json
